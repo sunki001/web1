@@ -4,10 +4,28 @@
     <title>Web1 - JavaScript</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+
+    <style>  /* selector 우선순위 class > id */
+        .js{
+            font-weight: bold;
+            color:red;
+        }
+        #first{
+            color:green;
+        }
+        span{
+            color:blue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
 </head>
 
 <body> <!-- 여기가 body 내용들 -->
     <h1><a href="index.html">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">          
     <div id="grid">
         <ol> <!-- 부모 tag -->
             <li><a href="1.html">HTML</a></li>
@@ -15,8 +33,16 @@
             <li><a href="3.html">JavaScript</a></li>
         </ol>
         <div id="article">
-            <h2>JavaScript</h2>
-            <p>JavaScript의 내용들 </p>
+            <h2 style="background-color:coral; color:powderblue">JavaScript</h2>
+            <p>
+                <span id="first" class="js">JavaScript</span> (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside <span>HTML</span> and <span>CSS</span>, <span class="js">JavaScript</span> is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in <span class="js">JavaScript</span> engine. Each of the many <span class="js">JavaScript</span> engines represent a different implementation of <span class="js">JavaScript</span>, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+                JavaScript의 내용들  --- 아래 내용에는 javascript coding test 
+            </p>
+            <input type="button" value="hi" onclick="alert('hi')">
+            <input type="text" onchange="alert('changed')">
+            <input type="text" onkeydown="alert('key down')">
+            <script> /* javascript code */
+            </script>
         </div>
     </div>
 </body>
