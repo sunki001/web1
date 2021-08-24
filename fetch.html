@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <body>
+    <article>
+ 
+    </article>
+    <input type="button" value="fetch" onclick="
+      fetch('html').then(function(response){  // .then(fn) 비동기 실행
+        // console.log(response);
+        if(response.status == '404') {
+          alert('Not found');
+        }
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+    ">
+  </body>
+</html>
