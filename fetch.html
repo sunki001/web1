@@ -5,6 +5,7 @@
  
     </article>
     <input type="button" value="fetch" onclick="
+/*
       fetch('html').then(function(response){  // .then(fn) 비동기 실행
         // console.log(response);
         if(response.status == '404') {
@@ -12,6 +13,10 @@
         }
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
+*/
+      fetch('html').then(function(response){
+        response.text().then(function(text){
+           document.querySelector('article').innerHTML = text;
         })
       })
     ">
